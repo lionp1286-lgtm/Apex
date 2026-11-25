@@ -1,0 +1,6 @@
+{
+  "name": "Apex",
+  "description": "A modern, gamified task management and countdown Progressive Web App with dynamic moods, multi-language RTL support, and progression rewards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

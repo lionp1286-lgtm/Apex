@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', 'Cairo', system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', 'Cairo', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    --app-bg: #F8FAFC;
+    --app-bg-pattern: none;
+    --app-surface: #FFFFFF;
+    --app-surface-muted: #F1F5F9;
+    --app-text: #0F172A;
+    --app-text-muted: #475569;
+    --app-border: rgba(15, 23, 42, 0.09);
+    --app-accent: #0F172A;
+    --app-accent-fg: #FFFFFF;
+    --app-accent-soft: rgba(15, 23, 42, 0.07);
+    --app-header-bg: rgba(255, 255, 255, 0.86);
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--app-bg);
+    color: var(--app-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--app-bg);
+    background-image: var(--app-bg-pattern);
+    background-attachment: fixed;
+    color: var(--app-text);
+    transition: background-color 200ms cubic-bezier(0.16, 1, 0.3, 1), color 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
